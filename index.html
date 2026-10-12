@@ -1,0 +1,187 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5d547">
+
+    <link rel="manifest" href="./manifest.json">
+
+    <title>E-Modul Aritmatika Sosial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">📚</div>
+        <div>
+            <h2>E-Modul</h2>
+            <p>Aritmatika Sosial</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HALAMAN BERANDA -->
+        <section id="beranda" class="halaman aktif">
+            <div class="hero">
+                <span class="label">MEDIA PEMBELAJARAN</span>
+
+                <h1>Aritmatika<br>Sosial 🌿</h1>
+
+                <p>
+                    Belajar matematika jadi lebih mudah,
+                    menyenangkan, dan interaktif.
+                </p>
+
+                <button onclick="bukaHalaman('materi')">
+                    Mulai Belajar →
+                </button>
+            </div>
+
+            <h2 class="judul">Menu Pembelajaran</h2>
+
+            <div class="menu">
+                <button class="kartu"
+                    onclick="bukaHalaman('materi')">
+                    <span>📖</span>
+                    <b>Materi</b>
+                    <small>Baca e-modul</small>
+                </button>
+
+                <button class="kartu"
+                    onclick="bukaHalaman('latihan')">
+                    <span>✏️</span>
+                    <b>Latihan Soal</b>
+                    <small>Isi jawaban</small>
+                </button>
+
+                <button class="kartu"
+                    onclick="bukaHalaman('hasil')">
+                    <span>💾</span>
+                    <b>Jawaban Saya</b>
+                    <small>Lihat jawaban tersimpan</small>
+                </button>
+            </div>
+        </section>
+
+        <!-- HALAMAN MATERI -->
+        <section id="materi" class="halaman">
+            <button class="kembali"
+                onclick="bukaHalaman('beranda')">
+                ← Kembali
+            </button>
+
+            <h1>📖 Materi Pembelajaran</h1>
+
+            <p>
+                Baca materi Aritmatika Sosial dari PDF Canva
+                yang tersedia di aplikasi.
+            </p>
+
+            <div class="pdf-container">
+                <iframe
+                    src="./modul.pdf"
+                    title="Materi Aritmatika Sosial">
+                </iframe>
+            </div>
+
+            <a class="tombol-link"
+                href="./modul.pdf"
+                target="_blank"
+                rel="noopener">
+                📖 Buka PDF
+            </a>
+        </section>
+
+        <!-- HALAMAN LATIHAN -->
+        <section id="latihan" class="halaman">
+            <button class="kembali"
+                onclick="bukaHalaman('beranda')">
+                ← Kembali
+            </button>
+
+            <h1>✏️ Latihan Soal</h1>
+
+            <label for="nama">Nama siswa</label>
+            <input id="nama" type="text"
+                placeholder="Masukkan nama">
+
+            <label for="kelas">Kelas</label>
+            <input id="kelas" type="text"
+                placeholder="Masukkan kelas">
+
+            <div class="soal">
+                <h3>Soal 1</h3>
+                <p>
+                    Sebuah tas berharga Rp80.000 mendapat
+                    diskon 25%. Berapa harga setelah diskon?
+                </p>
+
+                <label for="jawaban1">Jawaban kamu (rupiah)</label>
+                <input id="jawaban1" type="number"
+                    placeholder="Masukkan jawaban">
+            </div>
+
+            <div class="soal">
+                <h3>Soal 2</h3>
+                <p>
+                    Pedagang membeli barang Rp50.000 dan
+                    menjualnya Rp65.000. Berapa keuntungannya?
+                </p>
+
+                <label for="jawaban2">Jawaban kamu (rupiah)</label>
+                <input id="jawaban2" type="number"
+                    placeholder="Masukkan jawaban">
+            </div>
+
+            <div class="soal">
+                <h3>Soal 3</h3>
+                <p>
+                    Barang dibeli Rp120.000 dan dijual
+                    Rp100.000. Berapa kerugiannya?
+                </p>
+
+                <label for="jawaban3">Jawaban kamu (rupiah)</label>
+                <input id="jawaban3" type="number"
+                    placeholder="Masukkan jawaban">
+            </div>
+
+            <button onclick="periksaJawaban()">
+                Periksa Jawaban
+            </button>
+
+            <button class="tombol-hijau"
+                onclick="simpanJawaban()">
+                Simpan Jawaban
+            </button>
+
+            <p id="pesan"></p>
+        </section>
+
+        <!-- HALAMAN HASIL -->
+        <section id="hasil" class="halaman">
+            <button class="kembali"
+                onclick="bukaHalaman('beranda')">
+                ← Kembali
+            </button>
+
+            <h1>💾 Jawaban Saya</h1>
+
+            <div id="daftarJawaban" class="hasil">
+                Belum ada jawaban yang disimpan.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>💛 E-Modul Aritmatika Sosial 💚</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
