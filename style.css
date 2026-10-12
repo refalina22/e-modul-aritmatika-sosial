@@ -1,0 +1,338 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --kuning: #f4d35e;
+    --kuning-muda: #fff5bd;
+    --hijau: #39834d;
+    --hijau-muda: #e5f2dc;
+    --putih: #ffffff;
+    --teks: #304b35;
+    --abu: #71806f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffdf2;
+    color: var(--teks);
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--putih);
+    border-bottom: 2px solid var(--kuning-muda);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--kuning-muda);
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.header h2 {
+    font-size: 18px;
+}
+
+.header p {
+    font-size: 12px;
+    color: var(--abu);
+}
+
+/* AREA UTAMA */
+
+main {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 20px 16px 35px;
+}
+
+.halaman {
+    display: none;
+}
+
+.halaman.aktif {
+    display: block;
+}
+
+/* BERANDA */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #ffed91,
+        #fff8d6 60%,
+        #dff0ce
+    );
+    border-radius: 25px;
+    padding: 27px 22px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 25px #8b9e4820;
+}
+
+.label {
+    display: inline-block;
+    background: white;
+    color: var(--hijau);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 20px 0 12px;
+}
+
+.hero p {
+    color: #5f7258;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* TOMBOL */
+
+button,
+.tombol-link {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 13px;
+    padding: 13px 17px;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.hero button,
+#latihan > button:not(.kembali) {
+    background: var(--kuning);
+    color: var(--teks);
+}
+
+.tombol-hijau {
+    background: var(--hijau) !important;
+    color: white !important;
+    margin-top: 10px;
+}
+
+.kembali {
+    background: var(--hijau-muda);
+    color: var(--hijau);
+    margin-bottom: 18px;
+}
+
+.tombol-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--hijau);
+    color: white;
+    margin-top: 15px;
+}
+
+/* MENU */
+
+.judul {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.kartu {
+    background: white;
+    color: var(--teks);
+    border: 1px solid #e9edcf;
+    border-radius: 19px;
+    padding: 18px 12px;
+    text-align: left;
+    box-shadow: 0 5px 18px #66774412;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.kartu:last-child {
+    grid-column: 1 / -1;
+}
+
+.kartu span {
+    font-size: 27px;
+}
+
+.kartu b {
+    font-size: 14px;
+}
+
+.kartu small {
+    font-size: 12px;
+    color: var(--abu);
+}
+
+/* HALAMAN MATERI */
+
+#materi h1,
+#latihan h1,
+#hasil h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#materi > p {
+    color: var(--abu);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 65vh;
+    min-height: 350px;
+    border: 2px solid var(--kuning-muda);
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* FORM DAN SOAL */
+
+#latihan label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 14px 0 7px;
+}
+
+#latihan input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce5c9;
+    border-radius: 11px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+    color: var(--teks);
+}
+
+#latihan input:focus {
+    border-color: var(--hijau);
+}
+
+.soal {
+    background: white;
+    border: 1px solid #e9edcf;
+    border-radius: 18px;
+    padding: 17px;
+    margin: 17px 0;
+    box-shadow: 0 5px 18px #66774410;
+}
+
+.soal h3 {
+    color: var(--hijau);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.soal p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#pesan {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* HASIL JAWABAN */
+
+.hasil {
+    background: white;
+    border: 1px solid #e9edcf;
+    border-radius: 17px;
+    padding: 18px;
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px 12px;
+    background: var(--putih);
+    border-top: 1px solid var(--kuning-muda);
+    color: var(--hijau);
+    font-size: 12px;
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .kartu:last-child {
+        grid-column: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .hero {
+        padding: 35px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .kartu:last-child {
+        grid-column: auto;
+    }
+}

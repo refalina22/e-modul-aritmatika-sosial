@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "E-Modul Aritmatika Sosial",
+  "short_name": "E-Modul",
+  "description": "E-Modul pembelajaran Aritmatika Sosial",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8c9",
+  "theme_color": "#f5d547",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
